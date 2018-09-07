@@ -8,6 +8,7 @@ RUN apt-get update -y && \
     curl -s get.gvmtool.net | bash && \
     apt-get autoremove -y && \
     apt-get install -y openjdk-7-jre && \
+    apt-get install zip && \
     apt-get clean
     
 CMD ["java", "-version"]
