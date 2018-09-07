@@ -8,7 +8,7 @@ RUN apt-get update -y && \
     apt-get install zip && \
     apt-get install -y openjdk-7-jre && \
     curl -s "https://get.sdkman.io" | bash && \
-    sdk install grails 3.2.4
+    sdk install grails 3.2.4 && \
     apt-get autoremove -y && \
     apt-get clean
     
