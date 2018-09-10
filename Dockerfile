@@ -8,7 +8,7 @@ RUN add-apt-repository ppa:openjdk-r/ppa -y && \
     apt-get install -y curl unzip && \
     apt-get install -y curl zip && \
     apt-get install -y software-properties-common && \
-    apt-get install openjdk-8-jdk && \
+    apt-get install -y openjdk-8-jdk && \
     apt-get autoremove -y && \
     apt-get clean
 
