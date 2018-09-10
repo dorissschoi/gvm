@@ -6,10 +6,11 @@ ENV JAVA_HOME /usr/lib/jvm/java-openjdk
 RUN apt-get update -y && \
     apt-get install -y curl unzip && \
     apt-get install -y curl zip && \
+    apt-get install -y software-properties-common && \
     apt-get autoremove -y && \
     apt-get clean
 
-#    apt-get install software-properties-common && \
+
 #    add-apt-repository ppa:openjdk-r/ppa && \
 #    apt-get update && \
 #    apt-get install openjdk-8-jdk && \
