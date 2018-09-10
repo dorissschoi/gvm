@@ -4,14 +4,14 @@ ENV JAVA_HOME /usr/lib/jvm/java-openjdk
 ENV GRAILS_VERSION 3.2.8
 WORKDIR /usr/lib/jvm
 
-# Installs jdk, curl, SDKMAN and grails
 # Remarks: install update then software-properties-common 
+# Download Install openjdk, grails
 RUN apt-get update -y && \
     apt-get install -y software-properties-common && \
     add-apt-repository ppa:openjdk-r/ppa -y && \
     apt-get update -y && \
-    #apt-get install -y curl unzip && \
-    #apt-get install -y curl zip && \
+    apt-get install -y curl unzip && \
+    apt-get install -y curl wget && \
     apt-get install -y openjdk-8-jdk && \ 
     wget https://github.com/grails/grails-core/releases/download/v$GRAILS_VERSION/grails-$GRAILS_VERSION.zip && \
     unzip grails-$GRAILS_VERSION.zip && \
